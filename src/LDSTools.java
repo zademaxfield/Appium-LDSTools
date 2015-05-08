@@ -103,7 +103,7 @@ public class LDSTools {
         //File appDir = new File(classpathRoot, "..\\..\\..\\..\\Selenium");
         //MAC Path
         File appDir = new File(classpathRoot, "../../Selenium");
-        File app = new File(appDir, "ldstools-beta-20150416-2315.apk");
+        File app = new File(appDir, "ldstools-release-20150508-0435.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         //capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
         capabilities.setCapability("platformName", "Android");
@@ -131,16 +131,16 @@ public class LDSTools {
 
     }	
 
-	
+	/*
    
 	@Test
 	public void simpleTest() throws Exception {
 		Thread.sleep(4000);
-		justForTesting();	
+		//justForTesting();	
 
 		//under18HeadofHouse();	
 		//bishopricCounselorAndWardClerk();	
-		//bishopMemberOfSeparateStake();	
+		bishopMemberOfSeparateStake();	
 		//editCurrentUser();	
 		//editOtherUser();	
 		//editOtherUserInvalidPhone();	
@@ -156,7 +156,7 @@ public class LDSTools {
 		//KevinPalmer();
 
 	}
-	
+	*/
 	
 
 	public void justForTesting() throws Exception {
@@ -236,7 +236,7 @@ public class LDSTools {
 	}
 		
 	
-	/*
+	
 	
     @Rule
     public Retry retry = new Retry(3);
@@ -301,7 +301,7 @@ public class LDSTools {
 	//	loginCheck();	
 	//}
 	
-	*/
+	
 	
 	
 	
@@ -2274,21 +2274,21 @@ public class LDSTools {
 		//Members with Callings
 		clickButtonByXpathTitleName("Members with Callings");
 		Assert.assertTrue(checkElementTextViewReturn("Ami, Lealofi"));
-		Assert.assertTrue(checkElementTextViewReturn("Primary First Counselor (No date)"));
+		Assert.assertTrue(checkElementTextViewReturn("Primary First Counselor (1 year, 2 months)"));
 		Assert.assertFalse(checkElementTextViewReturn("Skywalker, Anakin"));
 		
 		clickButtonByXpathTitleName("ORGANIZATION");
 		Assert.assertTrue(checkElementTextViewReturn("Bishop"));
-		Assert.assertTrue(checkElementTextViewReturn("Ami, Samu (No date)"));
+		Assert.assertTrue(checkElementTextViewReturn("Ami, Samu (1 year, 7 months)"));
 		Assert.assertFalse(checkElementTextViewReturn("Kenobi, Obi-Wan"));
 		
 		clickButtonByXpathTitleName("DURATION");
-		Assert.assertTrue(checkElementTextViewReturn("Primary First Counselor"));
-		Assert.assertTrue(checkElementTextViewReturn("Ami, Lealofi"));
+		Assert.assertTrue(checkElementTextViewReturn("Young Women President"));
+		Assert.assertTrue(checkElementTextViewReturn("Tutunoa, Lusi"));
 		Assert.assertFalse(checkElementTextViewReturn("Amidala, Padme"));
 		
 		clickButtonByXpathTitleName("NOT SET APART");
-		Assert.assertTrue(checkElementTextViewReturn("Ward Assistant Clerk (No date)"));
+		Assert.assertTrue(checkElementTextViewReturn("Ward Assistant Clerk (3 years, 2 months)"));
 		Assert.assertTrue(checkElementTextViewReturn("Sitivi, Tama Kiliona"));
 		Assert.assertFalse(checkElementTextViewReturn("P0, C3"));
 		pressBackKey();
@@ -2335,11 +2335,11 @@ public class LDSTools {
 		Assert.assertFalse(checkElementTextViewReturn("Maul, Darth"));
 		
 		clickButtonByXpathTitleName("EXPIRING");
-		Assert.assertTrue(checkElementTextViewReturn("Ami, Lealofi"));
+		Assert.assertTrue(checkElementTextViewReturn("Kitara, Lafaele"));
 		Assert.assertFalse(checkElementTextViewReturn("Windu, Mace"));
 		
 		clickButtonByXpathTitleName("EXPIRED");
-		Assert.assertTrue(checkElementTextViewReturn("Alavaa, Toetoe"));
+		Assert.assertTrue(checkElementTextViewReturn("Ami, Lealofi"));
 		Assert.assertFalse(checkElementTextViewReturn("Jinn, Qui-Gon"));
 		
 		clickButtonByXpathTitleName("OTHER");
